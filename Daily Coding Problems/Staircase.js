@@ -20,4 +20,14 @@
 
 //Order of if steps matters
 
-//Edge cases
+//Edge cases...what id you could climb any number of steps from a set of posotive integers. Ca't climb negative stairs or go back down.
+
+function climbStairs(n) {
+    if (n < 0) {
+        return 0;
+    } else if (n === 0) {
+        return 1;
+    } else {
+        return climbStairs(n - 1) + climbStairs(n - 2);
+    }
+}
